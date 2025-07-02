@@ -14,12 +14,6 @@ add_executable(Kontoverwaltung
         src/terminal.c
         src/include/database.h
         src/include/terminal.h
-        src/auth.c
-        src/include/auth.h
-        src/account.c
-        src/include/account.h
-        src/transaction.c
-        src/include/transaction.h
         src/utils.c
         src/include/utils.h
 )
