@@ -1,0 +1,20 @@
++----------------+---------------+------+-----+---------+----------------+
+| Field          | Type          | Null | Key | Default | Extra          |
++----------------+---------------+------+-----+---------+----------------+
+| id             | int           | NO   | PRI | NULL    | auto_increment |
+| password       | varchar(255)  | NO   |     | NULL    |                |
+| balance        | decimal(10,0) | YES  |     | 0       |                |
+| account_number | int           | YES  | UNI | NULL    |                |
++----------------+---------------+------+-----+---------+----------------+
+
++--------------------+-----------------------------------------------------------+------+-----+-------------------+-------------------+
+| Field              | Type                                                      | Null | Key | Default           | Extra             |
++--------------------+-----------------------------------------------------------+------+-----+-------------------+-------------------+
+| id                 | int                                                       | NO   | PRI | NULL              | auto_increment    |
+| account_id         | int                                                       | NO   | MUL | NULL              |                   |
+| type               | enum('deposit','withdrawal','transfer_in','transfer_out') | NO   |     | NULL              |                   |
+| amount             | decimal(10,2)                                             | NO   |     | NULL              |                   |
+| timestamp          | datetime                                                  | YES  |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED |
+| description        | text                                                      | YES  |     | NULL              |                   |
+| related_account_id | int                                                       | YES  |     | NULL              |                   |
++--------------------+-----------------------------------------------------------+------+-----+-------------------+-------------------+
